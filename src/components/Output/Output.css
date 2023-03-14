@@ -1,0 +1,68 @@
+.output {
+  background: #00474b;
+  width: 328px;
+  height: 258px;
+  border-radius: 15px;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.output
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.output
+.text
+p:nth-of-type(1) {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.output
+p {
+  margin: 0;
+}
+
+.output
+.text
+p:nth-of-type(2) {
+  color: #7f9d9f;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.output
+.amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: #26c2ae;
+}
+
+.output
+.tip-amount,
+.output
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.output
+button {
+  height: 48px;
+  background: #26c2ae;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00474b;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+}
