@@ -1,6 +1,8 @@
 import React from 'react'
 import './Card.css'
 import Output from '../Output/Output'
+import dollar from '../../images/icon-dollar.svg'
+import person from '../../images/icon-person.svg'
 
 function Card() {
   return (
@@ -8,11 +10,12 @@ function Card() {
       <div className='input-card'>
         <div className='input-container'>
           <p>Bill</p>
-          <input type='text'></input>
+          <input type='text' placeholder='0'></input>
+          <img src={dollar} alt='dollar icon' />
         </div>
 
         <div className='tip-container'>
-          <p>Select Tip</p>
+          <p>Select Tip %</p>
           <div className='buttons-container'>
             <button>5%</button>
             <button>10%</button>
@@ -25,10 +28,11 @@ function Card() {
 
         <div className='input-container'>
           <p>Number of People</p>
-          <input type='text'></input>
+          <input type='text' placeholder='0'></input>
+          <img src={person} alt='person icon' />
         </div>
       </div>
-      
+
       <Output />
     </main>
   )

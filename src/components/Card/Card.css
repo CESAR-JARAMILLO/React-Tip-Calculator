@@ -19,6 +19,7 @@
 .input-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .input-card
@@ -41,6 +42,15 @@ input {
   border: none;
   border-radius: 10px;
   margin-bottom: 32px;
+  padding-right: 16px;
+}
+
+.input-container
+img {
+  position: absolute;
+  bottom: 8px;
+  left: 15px;
+
 }
 
 .tip-container {
