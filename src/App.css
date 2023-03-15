@@ -1,0 +1,10 @@
+.App {
+  width: 100vw;
+  /* text-align: center; */
+}
+
+.App
+img {
+  display: block;
+  margin: 50px auto 40px auto;
+}
