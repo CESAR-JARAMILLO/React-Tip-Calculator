@@ -9,6 +9,7 @@ function Card() {
 
   const [selectedValue, setSelectedValue] = useState(null)
   const [billValue, setBillValue] = useState(0)
+  const [partyValue, setPartyValue] = useState(0)
 
   const handleClick = (value) => {
     setSelectedValue(value)
@@ -18,6 +19,12 @@ function Card() {
     const value = parseFloat(event.target.value)
     setBillValue(value)
     console.log(billValue)
+  }
+  
+  const handlePartyChange = (event) => {
+    const value = parseFloat(event.target.value)
+    setPartyValue(value)
+    console.log(partyValue)
   }
 
   return (
@@ -43,7 +50,7 @@ function Card() {
 
         <div className='input-container'>
           <p>Number of People</p>
-          <input type='text' placeholder='0'></input>
+          <input onChange={handlePartyChange} type='text' placeholder='0'></input>
           <img src={person} alt='person icon' />
         </div>
       </div>
