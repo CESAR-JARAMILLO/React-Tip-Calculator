@@ -8,9 +8,16 @@ import person from '../../images/icon-person.svg'
 function Card() {
 
   const [selectedValue, setSelectedValue] = useState(null)
+  const [billValue, setBillValue] = useState(0)
 
   const handleClick = (value) => {
     setSelectedValue(value)
+  }
+
+  const handleBillChange = (event) => {
+    const value = parseFloat(event.target.value)
+    setBillValue(value)
+    console.log(billValue)
   }
 
   return (
@@ -18,7 +25,7 @@ function Card() {
       <div className='input-card'>
         <div className='input-container'>
           <p>Bill</p>
-          <input type='text' placeholder='0'></input>
+          <input onChange={handleBillChange} type='text' placeholder='0'></input>
           <img src={dollar} alt='dollar icon' />
         </div>
 
