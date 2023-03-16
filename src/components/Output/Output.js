@@ -1,7 +1,15 @@
 import React from 'react'
 import './Output.css'
 
-function Output() {
+function Output({ selectedValue, billValue, partyValue }) {
+  let tipAmount = 0;
+  let total = 0;
+
+  if (billValue && selectedValue && partyValue) {
+    tipAmount = ((billValue * selectedValue) / 100) / partyValue;
+    total = (billValue + ((billValue * selectedValue) / 100)) / partyValue;
+  }
+
   return (
     <section className='output'>
       <div className='tip-amount'>
@@ -9,14 +17,14 @@ function Output() {
           <p>Tip Amount</p>
           <p>/ person</p>
         </div>
-        <p className='amount'>$5.45</p>
+        <p className='amount'>{tipAmount ? `$${tipAmount.toFixed(2)}` : '$0.00'}</p>
       </div>
       <div className='total'>
-      <div className='text'>
+        <div className='text'>
           <p>Total</p>
           <p>/ person</p>
         </div>
-        <p className='amount'>$5.45</p>
+        <p className='amount'>{total ? `$${total.toFixed(2)}` : '$0.00'}</p>
       </div>
       <button>Reset</button>
     </section>

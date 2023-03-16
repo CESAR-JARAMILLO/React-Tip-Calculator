@@ -18,13 +18,13 @@ function Card() {
   const handleBillChange = (event) => {
     const value = parseFloat(event.target.value)
     setBillValue(value)
-    console.log(billValue)
+    // console.log(billValue)
   }
   
   const handlePartyChange = (event) => {
     const value = parseFloat(event.target.value)
     setPartyValue(value)
-    console.log(partyValue)
+    // console.log(partyValue)
   }
 
   return (
@@ -55,7 +55,11 @@ function Card() {
         </div>
       </div>
 
-      <Output />
+      <Output 
+        selectedValue={selectedValue} 
+        billValue={billValue} 
+        partyValue={partyValue} 
+      />
     </main>
   )
 }
