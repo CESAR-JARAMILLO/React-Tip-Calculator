@@ -27,6 +27,11 @@ function Card() {
     // console.log(partyValue)
   }
 
+  const handleCustomChange = (event) => {
+    const value = parseFloat(event.target.value)
+    setSelectedValue(value)
+  }
+
   return (
     <main className='main-card'>
       <div className='input-card'>
@@ -44,7 +49,7 @@ function Card() {
             <Button value={5} handleClick={() => handleClick(15)}>15%</Button>
             <Button value={5} handleClick={() => handleClick(25)}>25%</Button>
             <Button value={5} handleClick={() => handleClick(50)}>50%</Button>
-            <Button>{selectedValue}</Button>
+            <input onChange={handleCustomChange} className='custom-button' type='text' placeholder='Custom'></input>
           </div>
         </div>
 
