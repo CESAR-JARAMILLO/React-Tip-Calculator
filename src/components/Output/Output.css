@@ -81,4 +81,5 @@ button.reset-button:hover {
 .output
 button.reset-button.disabled {
   background: #0d686d;
+  cursor: not-allowed;
 } 
