@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-.output
+.output 
 .text {
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ p:nth-of-type(2) {
 .output
 button {
   height: 48px;
-  background: #26c2ae;
+  /* background: #0d686d; */
   font-size: 20px;
   font-weight: bold;
   color: #00474b;
@@ -66,3 +66,19 @@ button {
   border: none;
   border-radius: 5px;
 }
+
+.output
+button.reset-button {
+  background-color: #26c2ae;
+}
+
+.output
+button.reset-button:hover {
+  background-color: #9fe8df;
+  cursor: pointer;
+}
+
+.output
+button.reset-button.disabled {
+  background: #0d686d;
+} 

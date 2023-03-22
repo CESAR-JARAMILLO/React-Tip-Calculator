@@ -49,6 +49,7 @@ function Card() {
     setPartyValue(0);
     setSelectedValue(null);
     setCustomValue('');
+    setSelectedButton(null);
     billInputRef.current.value = '';
     partyInputRef.current.value = '';
   };

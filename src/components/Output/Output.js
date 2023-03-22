@@ -10,6 +10,9 @@ function Output({ selectedValue, billValue, partyValue, handleReset }) {
     total = (billValue + ((billValue * selectedValue) / 100)) / partyValue;
   }
 
+  const isResetDisabled = tipAmount === 0 || total === 0;
+  const resetClassName = isResetDisabled ? "reset-button disabled" : "reset-button";
+
   return (
     <section className='output'>
       <div className='tip-amount'>
@@ -26,7 +29,7 @@ function Output({ selectedValue, billValue, partyValue, handleReset }) {
         </div>
         <p className='amount'>{total ? `$${total.toFixed(2)}` : '$0.00'}</p>
       </div>
-      <button onClick={handleReset}>Reset</button>
+      <button className={resetClassName} onClick={handleReset} disabled={isResetDisabled}>Reset</button>
     </section>
   )
 }
