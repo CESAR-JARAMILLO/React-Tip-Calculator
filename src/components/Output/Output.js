@@ -1,7 +1,7 @@
 import React from 'react'
 import './Output.css'
 
-function Output({ selectedValue, billValue, partyValue }) {
+function Output({ selectedValue, billValue, partyValue, handleReset }) {
   let tipAmount = 0;
   let total = 0;
 
@@ -26,7 +26,7 @@ function Output({ selectedValue, billValue, partyValue }) {
         </div>
         <p className='amount'>{total ? `$${total.toFixed(2)}` : '$0.00'}</p>
       </div>
-      <button>Reset</button>
+      <button onClick={handleReset}>Reset</button>
     </section>
   )
 }
