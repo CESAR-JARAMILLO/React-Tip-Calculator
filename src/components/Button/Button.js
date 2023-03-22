@@ -1,8 +1,8 @@
-// import { useState } from 'react'
-
 function Button(props) {
+  const buttonClassName = props.isSelected ? "selected" : "";
+
   return (
-    <button onClick={props.handleClick}>{props.children}</button>
+    <button className={`tip-button ${buttonClassName}`} onClick={props.handleClick}>{props.children}</button>
   )
 }
 
