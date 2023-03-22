@@ -1,6 +1,5 @@
 .main-card{
   background: #fff;
-  /* height: 85vh; */
   border-radius: 15px;
   /* width: 100%; */
   padding: 32px 0;
@@ -94,4 +93,14 @@ img {
 .custom-button:focus {
   outline-color: #26c2ae;
   caret-color: #26c2ae;
+}
+
+@media (min-width: 980px) {
+  .main-card {
+    width: 920px;
+    height: 480px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
